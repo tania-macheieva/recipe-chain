@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = fetch(`${import.meta.env.VITE_API_URL}/api/recipes`);
 
 export const recipeAPI = {
   async getAll() {
