@@ -20,7 +20,7 @@ const RecipeChainApp = () => {
 		ingredients: "",
 		instructions: "",
 		changes: "",
-		author: "CurrentUser",
+		author: "",
 	});
 
 	useEffect(() => {
@@ -47,7 +47,7 @@ const RecipeChainApp = () => {
 			ingredients: "",
 			instructions: "",
 			changes: "",
-			author: "CurrentUser",
+			author: "",
 		});
 		setForkParentId(null);
 	};
@@ -87,7 +87,7 @@ const RecipeChainApp = () => {
 			ingredients: parent.ingredients,
 			instructions: parent.instructions,
 			changes: "",
-			author: "CurrentUser",
+			author: parent.author,
 		});
 		setShowCreateModal(true);
 	};

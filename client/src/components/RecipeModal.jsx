@@ -9,7 +9,7 @@ const RecipeModal = ({
 	setFormData,
 	isEdit = false,
 	forkParentTitle = null,
-	showChanges = false
+	showChanges = false,
 }) => {
 	if (!show) return null;
 
@@ -18,10 +18,10 @@ const RecipeModal = ({
 			<div className="modal-content">
 				<div className="modal-header">
 					<h2 className="modal-title">
-						{isEdit 
-							? "Edit Recipe" 
-							: forkParentTitle 
-							? "Fork Recipe" 
+						{isEdit
+							? "Edit Recipe"
+							: forkParentTitle
+							? "Fork Recipe"
 							: "Create New Recipe"}
 					</h2>
 					<button onClick={onClose} className="modal-close-btn">
@@ -38,6 +38,21 @@ const RecipeModal = ({
 				)}
 
 				<div className="modal-form-body">
+					<div className="modal-form-group">
+						<label>Author Name *</label>
+						<input
+							type="text"
+							value={formData.author}
+							onChange={e =>
+								setFormData({
+									...formData,
+									author: e.target.value,
+								})
+							}
+							placeholder="Your name or nickname"
+						/>
+					</div>
+
 					<div className="modal-form-group">
 						<label>Title *</label>
 						<input
@@ -98,7 +113,11 @@ const RecipeModal = ({
 
 					{showChanges && (
 						<div className="modal-form-group">
-							<label>{isEdit ? "Changes Made" : "What did you change?"}</label>
+							<label>
+								{isEdit
+									? "Changes Made"
+									: "What did you change?"}
+							</label>
 							<textarea
 								value={formData.changes}
 								onChange={e =>
@@ -114,10 +133,10 @@ const RecipeModal = ({
 
 					<div className="modal-actions">
 						<button onClick={onSubmit} className="primary-btn">
-							{isEdit 
-								? "Update Recipe" 
-								: forkParentTitle 
-								? "Create Fork" 
+							{isEdit
+								? "Update Recipe"
+								: forkParentTitle
+								? "Create Fork"
 								: "Create Recipe"}
 						</button>
 						<button onClick={onClose} className="secondary-btn">
