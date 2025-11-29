@@ -1,0 +1,95 @@
+.recipe-card {
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  margin-bottom: 16px;
+  transition: border-color 0.15s;
+  cursor: pointer;
+}
+
+.recipe-card:hover {
+  border-color: #8b7355;
+}
+
+.recipe-card.selected {
+  border-color: #2c2c2c;
+  background-color: #faf8f5;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.card-header h3 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2c2c2c;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.card-description {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.fork-btn {
+  background: transparent;
+  color: #2c2c2c;
+  border: 1px solid #d4d4d4;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fork-btn:hover {
+  border-color: #8b7355;
+  background-color: #faf8f5;
+}
+
+.card-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  align-items: center;
+}
+
+.card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recipe-tree-children {
+  margin-top: 16px;
+  border-left: 1px solid #d4d4d4;
+  padding-left: 24px;
+}
+
+.recipe-tree-child {
+  margin-left: 24px;
+  margin-top: 16px;
+}
